@@ -38,21 +38,21 @@ const plats = [
     nom: 'Sauce légumes',
     description: 'Pâte blanche, pâte noire ou riz',
     prix: 7000,
-    image: '../public/images/sauce_legumes.jpg'
+    image: '../src/assets/images/legumes.jpg'
   },
   {
     id: 2,
     nom: 'Pizza Quatre saisons',
     description: 'Fromage, jambon, légumes',
     prix: 6500,
-    image: '../public/images/pizza.jpeg'
+    image: '../src/assets/images/pizza.jpeg'
   },
   {
     id: 3,
     nom: 'Spaghetti bolognaise',
     description: 'Sauce tomate et viande',
     prix: 5000,
-    image: '../public/images/spaghetti.jpg'
+    image: '../src/assets/images/spaghetti.jpg'
   }
 ]
 </script>
