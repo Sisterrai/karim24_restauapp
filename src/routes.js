@@ -18,7 +18,7 @@ import DashboardStats from './components/DashboardStats.vue'
 
 let localUser;
 
-// Définition des routes
+// lesroutes
 export const routes = [
   // Routes client
   { path: '/', component: Accueil },
@@ -31,10 +31,10 @@ export const routes = [
     path: '/admin',
     component: Dashboard,
     children: [
-      { path: 'commandes', component: Commandes, meta: { requiresAuth: true } },
-      { path: 'menu', component: MenuGestion, meta: { requiresAuth: true } },
-      { path: 'parametres', component: Parametres, meta: { requiresAuth: true } },
-      { path: 'dashboardstats', component: DashboardStats, meta: { requiresAuth: true } },
+      { path: 'commandes', component: Commandes, meta: {requiresAuth: true} },
+      { path: 'menu', component: MenuGestion, meta: {requiresAuth: true} },
+      { path: 'parametres', component: Parametres, meta: {requiresAuth: true} },
+      { path: 'dashboardstats', component: DashboardStats, meta: {requiresAuth: true} },
       { path: 'login', component: LoginAdmin },
       { path: 'unauthorized', component: Unauthorized },
 
