@@ -2,7 +2,7 @@
   <nav class="bg-white shadow p-4 flex justify-between items-center">
     <div class="text-xl font-bold">KARIM 24</div>
 
-    <!-- Liens desktop -->
+    
     <div class="hidden md:flex items-center gap-6">
       <router-link to="/" class="hover:text-orange-500">Accueil</router-link>
       <router-link to="/menue" class="hover:text-orange-500">Menu</router-link>
