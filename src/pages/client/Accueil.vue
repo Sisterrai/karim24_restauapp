@@ -1,7 +1,7 @@
 <template>
   <Navbar/>
   <HeroSection />
-  <PlatsVedettes />
+  <!-- <PlatsVedettes /> -->
   <CommentCaMarche />
   <Menu/>
   <Footer />
