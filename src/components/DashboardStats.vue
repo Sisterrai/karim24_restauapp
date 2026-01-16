@@ -32,7 +32,7 @@ onMounted(async () => {
     .from('orders')
     .select('*, order_items(*)')
 
-  if(error) {
+  if (error) {
     console.error(error)
     return
   }
@@ -43,7 +43,7 @@ onMounted(async () => {
   }))
 })
 
-// KPIs
+
 const totalOrders = computed(() => orders.value.length)
 
 const totalAmount = computed(() =>
@@ -53,6 +53,6 @@ const totalAmount = computed(() =>
 const totalDishes = computed(() =>
   orders.value.reduce((sum, order) =>
     sum + order.items.reduce((s, i) => s + i.quantity, 0)
-  , 0)
+    , 0)
 )
 </script>

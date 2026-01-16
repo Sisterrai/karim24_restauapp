@@ -1,4 +1,3 @@
-// src/routes.js
 import { createRouter, createWebHistory } from 'vue-router'
 import { supabase } from "./supabase/supabase"
 
@@ -15,6 +14,7 @@ import MenuGestion from './pages/admin/MenuGestion.vue'
 import Parametres from './pages/admin/Parametres.vue'
 import LoginAdmin from "./pages/admin/LoginAdmin.vue"
 import Unauthorized from './pages/admin/Unauthorized.vue'
+import DashboardStats from './components/DashboardStats.vue'
 
 let localUser;
 
@@ -34,6 +34,7 @@ export const routes = [
       { path: 'commandes', component: Commandes, meta: { requiresAuth: true } },
       { path: 'menu', component: MenuGestion, meta: { requiresAuth: true } },
       { path: 'parametres', component: Parametres, meta: { requiresAuth: true } },
+      { path: 'dashboardstats', component: DashboardStats, meta: { requiresAuth: true } },
       { path: 'login', component: LoginAdmin },
       { path: 'unauthorized', component: Unauthorized },
 
@@ -50,7 +51,7 @@ const router = createRouter({
 
 // Fonction pour vérifier si l'utilisateur est connecté
 async function getUser() {
-  localUser= await supabase.auth.getSession();
+  localUser = await supabase.auth.getSession();
   if (localUser.data.session == null) {
     next('/unauthorized')
   } else {
@@ -58,17 +59,14 @@ async function getUser() {
   }
 }
 
-// Guard pour les routes protégées
+//protection des pages
 router.beforeEach((to, from, next) => {
   if (to.meta.requiresAuth) {
     getUser(next)
-    
+
   } else {
     next()
   }
 })
 
 export default router
-
-// https://api.telegram.org/bot7728127990:AAEwxfRl6hC0G6pjN40yStLjOMvKCsN2LR4/sendMessage?chat_id=6901816397&text=Nouvelle%20commande%20reçue
-

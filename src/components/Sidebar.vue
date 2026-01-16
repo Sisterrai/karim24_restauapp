@@ -13,7 +13,7 @@
                 Menu
             </router-link>
 
-            <router-link to="/admin/stats" class="px-4 py-2 rounded hover:bg-gray-700"
+            <router-link to="/admin/dashboardstats" class="px-4 py-2 rounded hover:bg-gray-700"
                 active-class="bg-orange-500 text-white">
                 Statistiques
             </router-link>

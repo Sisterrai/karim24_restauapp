@@ -37,7 +37,7 @@ onMounted(async () => {
   if (catError) console.error(catError)
   categories.value = catData || []
 
-  
+
   const { data: dishData, error: dishError } = await supabase
     .from('dishes')
     .select('*')
@@ -48,7 +48,7 @@ onMounted(async () => {
 
 
 const filteredDishes = computed(() => {
-  if (selectedCategory.value === null) return dishes.value 
+  if (selectedCategory.value === null) return dishes.value
   return dishes.value.filter(d => d.category_id === selectedCategory.value)
 })
 
