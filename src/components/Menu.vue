@@ -56,5 +56,7 @@ const filteredDishes = computed(() => {
 const addToCart = (dish) => {
   console.log('Plat ajouté :', dish.name)
   cart.add(dish)
+
+  alert('Plat ajouté à votre panier')
 }
 </script>

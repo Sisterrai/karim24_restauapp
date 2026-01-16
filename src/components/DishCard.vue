@@ -14,7 +14,7 @@
           {{ dish.price }} FCFA
         </span>
 
-        <button @click="$emit('add', dish)" class="bg-orange-500 text-white px-3 py-1 rounded">
+        <button @click="$emit('add', dish)" class="bg-orange-500 text-white px-3 py-1 rounded cursor-pointer hover:bg-orange-600 transition" >
           Commander
         </button>
       </div>
